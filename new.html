@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+    <head>    
+        <meta charset = "utf-8">
+        <title>ARTranslate</title>
+        <link rel="stylesheet" href="normalize.css"> 
+	    <script>
+			var languages = ["Afrikaans", "Albanian", "Amharic", "Arabic", "Armenian", "Azeerbaijani", "Basque", "Belarusian", "Bengali", "Bosnian", "Bulgarian", "Catalan", "Cebuano", "Chinese (Simplified)", "Chinese (Traditional)", "Corsican", "Croatian", "Czech", "Danish", "Dutch", "English", "Esperanto", "Estonian", "Finnish", "French", "Frisian", "Galician", "Georgian", "German", "Greek", "Gujarati", "Haitian Creole", "Hausa", "Hawaiian", "Hebrew", "Hindi", "Hmong", "Hungarian", "Icelandic", "Igbo", "Indonesian", "Irish", "Italian", "Japanese", "Javanese", "Kannada", "Kazakh", "Khmer", "Korean", "Kurdish", "Kyrgyz", "Lao", "Latin", "Latvian", "Lithuanian", "Luxembourgish", "Macedonian", "Malagasy", "Malay", "Malayalam", "Maltese", "Maori", "Marathi", "Mongolian", "Myanmar (Burmese)", "Nepali", "Norwegian", "Nyanja (Chichewa)", "Pashto", "Persian", "Polish", "Portuguese (Portugal, Brazil)", "Punjabi", "Romanian", "Russian", "Samoan", "Scots Gaelic", "Serbian", "Sesotho", "Shona", "Sindhi", "Sinhala (Sinhalese)", "Slovak", "Slovenian", "Somali", "Spanish", "Sundanese", "Swahili", "Swedish", "Tagalog (Filipino)", "Tajik", "Tamil", "Telugu", "Thai", "Turkish", "Ukrainian", "Urdu", "Uzbek", "Vietnamese", "Welsh", "Xhosa", "Yiddish", "Yoruba", "Zulu"];
+			function loadLanguageOptions() {
+				document.getElementById("languagesDropdown").innerHTML = "";
+				for (var i = 0; i < languages.length; i++) {
+					var opt=document.createElement("option");
+					opt.value=languages[i];
+					opt.text=languages[i];
+					document.getElementById("languagesDropdown").add(opt)
+				}
+			}
+	    </script>
+	    <style>
+	    	body {
+	    		background-color: rgb(235,245,255);
+	    	}
+	    	h1 {
+	    		text-align: center;
+	    	}
+	    	#controlsContainer, footer {
+	    		padding:5%;
+	    	}
+	    	#snap{
+	    		float: left;
+	    	}
+	    	#languagesDropdown {
+	    		float: right;
+	    	}
+		</style>
+    </head>
+    <body onload="loadLanguageOptions()">
+     	<header>
+        	<h1>ARTranslate</h1>
+        </header>
+	<main>
+        <video id="videoScreen" width="640" height="480" autoplay></video>
+        <div id="controlsContainer">
+	        <button id="snap">Snap Photo</button>
+	        <select id="languagesDropdown"></select>
+	    </div>
+        <canvas width="640" height="480"></canvas>
+    </main>
+	</body>
+	<footer> &copy; copyright 2018 </footer>
+</html>

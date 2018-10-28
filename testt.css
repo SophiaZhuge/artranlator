@@ -1,0 +1,40 @@
+@media screen and (min-width: 768px) {  }
+ 
+  #wrapper {   
+       width: 80%;   
+       margin: 0px auto; 
+       background-color: rgb(235,245,255); 
+       border: 1px gray solid;
+
+
+      
+header { 
+	font-family: "Times New Roman", Georgia, serif;
+    font-size: 1.5em;
+    text-align: centre;
+	height: 70px; 
+	background-color: orange;
+}
+nav{
+	font-size: 1.1em;
+	display: inline ;
+}
+
+main { 
+	padding: padding: 0 3%;
+}
+
+h1 {
+    color: rgb(200,34,34);
+    font-family: "Times New Roman", Georgia, serif;
+    font-size: 1.5em;
+    
+}
+p { 
+    color: black;  
+    background-color: white; } 
+
+footer { 
+     padding: 3px 10px; 
+     text-align: centre; 
+}
